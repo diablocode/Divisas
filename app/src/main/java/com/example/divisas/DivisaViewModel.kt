@@ -21,4 +21,11 @@ class DivisaViewModel:ViewModel() {
         val respuesta = service.getConversion(apikey,base_currency,currencies)
         return respuesta
     }
+
+    suspend fun getDivisas(
+        apikey: String
+    ) : DivisaData {
+        val respuesta = service.getDivisas(apikey)
+        return respuesta
+    }
 }

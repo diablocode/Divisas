@@ -11,4 +11,9 @@ interface DivisaService {
         @Query("base_currency") base_currency: String,
         @Query("currencies") currencies: String
     ) : ResultData
+
+    @GET("currencies")
+    suspend fun getDivisas(
+        @Query("apikey") apikey: String
+    ) : DivisaData
 }
